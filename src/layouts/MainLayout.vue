@@ -7,7 +7,7 @@
            <strong>Paypay.</strong>
         </q-toolbar-title>
 
-        <q-tabs inline-label no-caps active-color="primary" class="tabs text-grey" v-model="currentTab">
+        <q-tabs inline-label no-caps active-color="primary" class="q-layout-padding text-grey" v-model="currentTab">
           <q-tab name="dashboard" icon="location_on" label="Dashboard" class="tab"></q-tab>
           <q-tab name="invoices" icon="wallet" label="Invoices" class="tab"></q-tab>
           <q-tab name="wallet" icon="location_on" label="Wallet" class="tab"></q-tab>
@@ -36,64 +36,115 @@
             </q-banner>
           </q-tab-panel>
           <q-tab-panel name="invoices">
-              Invoices
-            <q-card>
-              <q-card>
-                <q-banner inline-actions class="text-white bg-red">
-      Dipa inhouse
-      <template v-slot:action>
-        You have lost connection to the internet. This app is offline.
-      </template>
-    </q-banner>
-              </q-card>
+               <div class="page-heading text-primary text-bold">
+                Invoices
+                <span class="text-grey text-normal">
+                  /edit invoice(INV-2022-010)
+                </span>
+              </div>
+              <section>
+                <div class="dipa-column">
+                  <div class="dipa-details">
+                    <img src="../assets/dipa.png"/>
+                    <span>
+                      Dipa Inhouse
+                      <p>hello@dipainhouse.com</p>
+                    </span>
+                  </div>
+                  <div class="dipa-address">
+                        <span><p>Ijen Boulevard street 101</p>
+                        <p>Manga City,65115</p>
+                        <p>East Java, Ind0nesia</p></span>
+                  </div>
+                </div>
               <br >
-              <q-card>
-                <q-banner inline-actions class="text-white bg-red">
+              <q-card class="bg-accent text-white">
+                <div class="invoice-card">
+                  <div class="invoice-card-left">
+                    <span>
+                      <p>Billed to</p>
+                      <p>INV-2022-010</p>
+                      <p>Issued Date: 11 Jan 2022</p>
+                      <p>Due Date: 18 Jan 2022</p>
+                    </span>
+                  </div>
+                  <div class="invoice-card-right">
+                  <span>
+                    <p>Billed to</p>
+                      <p>INV-2022-010</p>
+                      <p>Issued Date: 11 Jan 2022</p>
+                      <p>Due Date: 18 Jan 2022</p>
+                    </span>
+                  </div>
+                </div>
+                <!-- <q-banner inline-actions class="invoice-q-card text-white bg-accent display-flex">
       Invoice Number
-      <template v-slot:action>
+
+        <div>
+          You have lost connection to the internet. This app is offline.
         You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline
+        </div>
+        <div>
+          You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline
+        </div>
+         <template v-slot:action>
+        <span>You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline.</span>
+        <span>You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline.
+        You have lost connection to the internet. This app is offline.</span>
       </template>
-    </q-banner>
+    </q-banner> -->
               </q-card>
               <br>
-              <q-banner inline-actions class="text-white bg-red">
-     Item Detail
-      <template v-slot:action>
-        <q-btn color="primary" icon="mail" label="Customize"></q-btn>
-      </template>
-    </q-banner>
-              <div class="q-pa-md">
+              <div class="item-column">
+                  <div class="item-details">
+                    <span>
+                      Dipa Inhouse
+                      <p>hello@dipainhouse.com</p>
+                    </span>
+                  </div>
+                  <div class="customize-button">
+                    <q-btn
+                    style="background: #F5F5FD;
+                    color: #4038A4"
+                    icon="settings"
+                    label="Customize"></q-btn>
+                  </div>
+                </div>
+              <div class="item-table ">
     <q-markup-table>
       <thead>
         <tr>
-          <th class="text-right">Item Name</th>
-          <th class="text-right">Hours</th>
-          <th class="text-right">Rate/hr</th>
-          <th class="text-right">Tax</th>
-          <th class="text-right">Line Total</th>
+          <th class="text-left">Item Name</th>
+          <th class="text-left">Hours</th>
+          <th class="text-left">Rate/hr</th>
+          <th class="text-left">Tax</th>
+          <th class="text-left">Line Total</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="text-right">
+          <td class="text-left">
             <q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-right"><q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-right"><q-input filled v-model="text" label="Filled"></q-input></td>
-
-          <td class="text-right"><q-input filled v-model="text" label="Filled"></q-input></td>
-
-          <td class="text-right"><q-input filled v-model="text" label="Filled"></q-input></td>
-
+          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
+          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
+          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
+          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
         </tr>
       </tbody>
     </q-markup-table>
   </div>
-          </q-card>
+        </section>
             <q-card>
             <q-input filled v-model="text" label="Filled"></q-input>
           </q-card>
             <!--<q-tree :nodes="nodes" node-key="label" default-expand-all></q-tree>-->
-            <div class="q-pa-md">
+            <div class="payment-table">
     <q-markup-table>
       <thead>
         <tr>
@@ -101,7 +152,6 @@
           <th class="text-right">Calories</th>
           <th class="text-right">Fat (g)</th>
           <th class="text-right">Carbs (g)</th>
-          <th class="text-right">Protein (g)</th>
           <th class="text-right">Sodium (mg)</th>
         </tr>
       </thead>
@@ -111,7 +161,6 @@
           <td class="text-right">159</td>
           <td class="text-right">6</td>
           <td class="text-right">24</td>
-          <td class="text-right">4</td>
           <td class="text-right">87</td>
         </tr>
         <tr>
@@ -119,7 +168,6 @@
           <td class="text-right">237</td>
           <td class="text-right">9</td>
           <td class="text-right">37</td>
-          <td class="text-right">4.3</td>
           <td class="text-right">129</td>
         </tr>
         <tr>
@@ -127,7 +175,6 @@
           <td class="text-right">262</td>
           <td class="text-right">16</td>
           <td class="text-right">23</td>
-          <td class="text-right">6</td>
           <td class="text-right">337</td>
         </tr>
         <tr>
@@ -135,7 +182,6 @@
           <td class="text-right">305</td>
           <td class="text-right">3.7</td>
           <td class="text-right">67</td>
-          <td class="text-right">4.3</td>
           <td class="text-right">413</td>
         </tr>
         <tr>
@@ -143,7 +189,6 @@
           <td class="text-right">356</td>
           <td class="text-right">16</td>
           <td class="text-right">49</td>
-          <td class="text-right">3.9</td>
           <td class="text-right">327</td>
         </tr>
       </tbody>
@@ -192,5 +237,83 @@ export default defineComponent({
     margin-left: 3rem;
     padding-right: 20%;
   }
+  .q-layout-padding{
+    padding: 0;
+  }
+  .page-heading{
+    padding: 0rem 1.5rem 1rem 0rem;
+  }
+  section{
+    padding: 0rem 1rem;
+  }
+  .q-card{
+    border-radius: 1rem;
+    height: max-content;
+  }
+
+  .dipa-column, .item-column{
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+
+    .dipa-details, .item-details{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span{
+        font-weight: 600;
+
+        p{
+          margin-top: 3px;
+          color: grey;
+          font-weight: 500;
+        }
+      }
+
+      img{
+        margin-right: 1rem;
+        max-width: 4rem;
+        border-radius: 3rem;
+      }
+    }
+
+    .dipa-address{
+      span{
+        color: grey;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .invoice-card{
+    display: flex;
+    justify-content: space-between;
+
+    .invoice-card-left {
+      padding-top: 1rem;
+      padding-left: 1rem;
+}
+
+    .invoice-card-right{
+        padding-top: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+  }
+
+  .customize-button{
+
+  }
+
+
+  // .q-card{
+  //   background-color: transparent;
+  // }
 
 </style>
