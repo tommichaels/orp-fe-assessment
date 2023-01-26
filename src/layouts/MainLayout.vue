@@ -37,6 +37,30 @@
           </q-tab-panel>
           <q-tab-panel name="invoices">
             <q-card>
+              <q-card>
+                <q-banner inline-actions class="text-white bg-red">
+      Dipa inhouse
+      <template v-slot:action>
+        You have lost connection to the internet. This app is offline.
+      </template>
+    </q-banner>
+              </q-card>
+              <br >
+              <q-card>
+                <q-banner inline-actions class="text-white bg-red">
+      Invoice Number
+      <template v-slot:action>
+        You have lost connection to the internet. This app is offline.
+      </template>
+    </q-banner>
+              </q-card>
+              <br>
+              <q-banner inline-actions class="text-white bg-red">
+     Item Detail
+      <template v-slot:action>
+        <q-btn color="primary" icon="mail" label="Customize"></q-btn>
+      </template>
+    </q-banner>
               <div class="q-pa-md">
     <q-markup-table>
       <thead>
@@ -67,18 +91,6 @@
             <q-card>
             <q-input filled v-model="text" label="Filled"></q-input>
           </q-card>
-                     <q-banner class="bg-positive text-white q-mt-md">
-              <template v-slot:avatar>
-                <q-icon name="check" color="white"></q-icon>
-              </template>
-              BTC may be available at this address.
-            </q-banner>
-            <q-banner class="bg-negative text-white q-mt-md">
-              <template v-slot:avatar>
-                <q-icon name="close" color="white"></q-icon>
-              </template>
-              BTC is not available at this address.
-            </q-banner>
             <!--<q-tree :nodes="nodes" node-key="label" default-expand-all></q-tree>-->
             <div class="q-pa-md">
     <q-markup-table>
