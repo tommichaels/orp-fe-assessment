@@ -1,25 +1,25 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
+  <q-layout class="layout" view="lHh Lpr lFf">
+    <q-header bordered class="bg-white text-primary">
+      <q-toolbar class="toolbar" >
 
-        <q-toolbar-title>
-          Paypay.
+        <q-toolbar-title class="text-logo">
+           <strong>Paypay.</strong>
         </q-toolbar-title>
 
-        <q-tabs v-model="currentTab">
-          <q-tab name="dashboard" icon="location_on" label="Dashboard"></q-tab>
-          <q-tab name="invoices" icon="wallet" label="Invoices"></q-tab>
-          <q-tab name="wallet" icon="location_on" label="Wallet"></q-tab>
-          <q-tab name="activity" icon="wallet" label="Activity"></q-tab>
-          <q-tab name="help" icon="location_on" label="Help"></q-tab>
+        <q-tabs inline-label no-caps active-color="primary" class="tabs text-grey" v-model="currentTab">
+          <q-tab name="dashboard" icon="location_on" label="Dashboard" class="tab"></q-tab>
+          <q-tab name="invoices" icon="wallet" label="Invoices" class="tab"></q-tab>
+          <q-tab name="wallet" icon="location_on" label="Wallet" class="tab"></q-tab>
+          <q-tab name="activity" icon="wallet" label="Activity" class="tab"></q-tab>
+          <q-tab name="help" icon="phone" label="Help" class="tab"></q-tab>
         </q-tabs>
         <!-- <pre>{{ currentTab }}</pre> -->
       </q-toolbar>
     </q-header>
 
    <q-page-container>
-    <q-page>
+    <q-page padding>
       <q-tab-panels v-model="currentTab" animated style="background-color:#f5f5f5;">
           <q-tab-panel name="dashboard">
             <q-input filled v-model="text" label="Filled"></q-input>            <q-banner class="bg-positive text-white q-mt-md">
@@ -36,6 +36,7 @@
             </q-banner>
           </q-tab-panel>
           <q-tab-panel name="invoices">
+              Invoices
             <q-card>
               <q-card>
                 <q-banner inline-actions class="text-white bg-red">
@@ -182,3 +183,14 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+.tab{
+  padding: 1rem 1rem;
+}
+  .toolbar{
+    margin-left: 3rem;
+    padding-right: 20%;
+  }
+
+</style>

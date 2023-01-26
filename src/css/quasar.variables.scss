@@ -12,7 +12,16 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
+// Example: Import Open Sans with multiple weights
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+// Set the default font-family
+$typography-font-family : 'Poppins', sans-serif !default;
+
+// Fix font-weight values to match the imported font family weights
+$text-weights: (thin: 300, light: 400, regular: 600, medium: 700, bold: 800, bolder: 800) !default;
+$button-font-weight: 600; // or 400 if you prefer thinner;
+
+$primary   : #4038A4;
 $secondary : #26A69A;
 $accent    : #9C27B0;
 
@@ -23,3 +32,5 @@ $positive  : #21BA45;
 $negative  : #C10015;
 $info      : #31CCEC;
 $warning   : #F2C037;
+
+
