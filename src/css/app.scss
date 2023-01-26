@@ -1,1 +1,4 @@
 // app global css in SCSS form
+.table>tbody>tr>th, .table>tbody>tr>td {
+  border-top: none;
+}
