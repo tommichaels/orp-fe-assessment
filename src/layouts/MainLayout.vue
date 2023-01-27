@@ -170,7 +170,24 @@
         <section>
 
         <div class="payment-section">
-          <div class="account-details">
+        <div class="account-card-layout">
+          <div class="card-headers">
+              <p>Payment Methods</p>
+              <p>Select Payment</p>
+          </div>
+          <div class="account-card">
+              <div class="card-details">
+                <p>Wire Transfer</p>
+                <p>Account Name: <span>Barly Vallendito</span></p>
+                <p>Account Number: <span>4683 8628 4834</span></p>
+                <p>Routing Number: <span>67389747834</span></p>
+              </div>
+              <div class="payment-img">
+                  <img src="../assets/wise.png" />
+              </div>
+          </div>
+        </div>
+          <!-- <div class="account-details">
             <table class="content-table">
   <thead>
     <tr>
@@ -193,7 +210,7 @@
     </tr>
   </tbody>
 </table>
-          </div>
+          </div> -->
           <div class="payment-details">
             <div class="item-table">
               <q-markup-table>
@@ -224,7 +241,10 @@
     </q-markup-table>
   </div>
           </div>
+
+
         </div>
+
       </section>
             <!-- <q-card>
             <q-input filled v-model="text" label="Filled"></q-input>
@@ -474,6 +494,32 @@ export default defineComponent({
     width: 400px;
     margin: 25px 0;
   }
+}
+
+.account-card-layout{
+  width: 350px;
+  margin: 25px 0;
+  .card-headers{
+    display: flex;
+    justify-content: space-between;
+  }
+  .account-card{
+    display: flex;
+      justify-content: space-between;
+      margin: 0px 0px 0px 15px;
+    .card-details{
+      // p{
+      //   line-height: 10px;
+      // }
+    }
+    img{
+      margin-right: 1rem;
+      max-width: 4rem;
+    }
+  }
+}
+.q-table th, .q-table td {
+  border: none;
 }
 
   // .q-card{
