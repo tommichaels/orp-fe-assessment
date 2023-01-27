@@ -167,11 +167,70 @@
     </q-markup-table>
   </div>
         </section>
+        <section>
+
+        <div class="payment-section">
+          <div class="account-details">
+            <table class="content-table">
+  <thead>
+    <tr>
+      <th>Wire Transfer</th>
+      <th>Payment Method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width:60%">Account Name</td>
+      <td>88,110</td>
+    </tr>
+    <tr class="active-row">
+      <td>Account Number</td>
+      <td>72,400</td>
+    </tr>
+    <tr>
+      <td>Routing Number</td>
+      <td>52,300</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+          <div class="payment-details">
+            <div class="item-table">
+              <q-markup-table>
+      <thead>
+        <tr>
+          <th class="text-left" style="width:50%">Payment Method</th>
+          <th class="text-left">Select Payment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-left">Sub Total</td>
+          <td class="text-left">$4,200.00</td>
+        </tr>
+        <tr>
+          <td class="text-left">Discount</td>
+          <td class="text-left">$0.00</td>
+        </tr>
+        <tr>
+          <td class="text-left"></td>
+          <td class="text-left"></td>
+        </tr>
+        <tr>
+          <td class="text-left">Total Discount</td>
+          <td class="text-left">$0.00</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
+  </div>
+          </div>
+        </div>
+      </section>
             <!-- <q-card>
             <q-input filled v-model="text" label="Filled"></q-input>
           </q-card> -->
             <!--<q-tree :nodes="nodes" node-key="label" default-expand-all></q-tree>-->
-            <div class="payment-table">
+            <!-- <div class="payment-table">
     <q-markup-table>
       <thead>
         <tr>
@@ -220,7 +279,7 @@
         </tr>
       </tbody>
     </q-markup-table>
-  </div>
+  </div> -->
           </q-tab-panel>
         </q-tab-panels>
     </q-page>
@@ -346,6 +405,8 @@ export default defineComponent({
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
 }
 
 .content-table thead tr {
@@ -359,42 +420,60 @@ export default defineComponent({
 .content-table td {
   padding: 12px 15px;
 
-  input[type=text]{
-    width:100%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
-  }
+  // input[type=text]{
+  //   width:100%;
+  //   border:2px solid #aaa;
+  //   border-radius:4px;
+  //   margin:8px 0;
+  //   outline:none;
+  //   padding:8px;
+  //   box-sizing:border-box;
+  //   transition:.3s;
+  // }
 
-  input[type=text]:focus{
-    border-color:dodgerBlue;
-    box-shadow:0 0 8px 0 dodgerBlue;
-  }
+  // input[type=text]:focus{
+  //   border-color:dodgerBlue;
+  //   box-shadow:0 0 8px 0 dodgerBlue;
+  // }
 
 }
 
 .content-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border: none;
 }
 
 .content-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
-.content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
+// .content-table tbody tr:last-of-type {
+//   border-bottom: 2px solid #009879;
+// }
 
-.content-table tbody tr.active-row {
-  font-weight: bold;
-  color: #009879;
-}
+// .content-table tbody tr.active-row {
+//   font-weight: bold;
+//   color: #009879;
+// }
 .item-table{
   margin-bottom: 1rem;
+}
+
+.payment-section{
+  display: flex;
+  justify-content: space-between;
+
+  .account-details{
+    width: 600px;
+
+    table{
+      border: none;
+    }
+  }
+
+  .payment-details{
+    width: 400px;
+    margin: 25px 0;
+  }
 }
 
   // .q-card{
