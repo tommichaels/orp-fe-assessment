@@ -77,6 +77,7 @@
                     </span>
                   </div>
                 </div>
+
                 <!-- <q-banner inline-actions class="invoice-q-card text-white bg-accent display-flex">
       Invoice Number
 
@@ -116,33 +117,59 @@
                     label="Customize"></q-btn>
                   </div>
                 </div>
-              <div class="item-table ">
+                  <!-- <table class="content-table">
+  <thead>
+    <tr>
+      <th style="width:50%">Item Name</th>
+      <th>Hours</th>
+      <th>Rate/hr</th>
+      <th>Tax</th>
+      <th>Line Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" placeholder="Item name"></td>
+      <td><input type="text" placeholder="Your name"></td>
+      <td><input type="text" placeholder="Your name"></td>
+      <td><input type="text" placeholder="Your name"></td>
+      <td><input type="text" placeholder="total"></td>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="Your name"></td>
+    </tr>
+  </tbody>
+</table> -->
+              <div class="item-table">
     <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left">Item Name</th>
+          <th class="text-left" style="width:50%">Item Name</th>
           <th class="text-left">Hours</th>
           <th class="text-left">Rate/hr</th>
-          <th class="text-left">Tax</th>
-          <th class="text-left">Line Total</th>
+          <th class="text-left" style="max-width: 100px">Tax</th>
+          <th class="text-left" style="max-width: 100px">Line Total</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="text-left">
-            <q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
-          <td class="text-left"><q-input filled v-model="text" label="Filled"></q-input></td>
+          <td class="text-left"><q-input filled v-model="text" placeholder="Item name" style="max-width: 700px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="number" placeholder="hr" style="max-width: 100px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="number" placeholder="total" style="max-width: 100px"></q-input></td>
+          <td class="text-left"> <q-btn round color="primary" icon="add"></q-btn></td>
+        </tr>
+        <tr>
+          <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px"></q-input></td>
         </tr>
       </tbody>
     </q-markup-table>
   </div>
         </section>
-            <q-card>
+            <!-- <q-card>
             <q-input filled v-model="text" label="Filled"></q-input>
-          </q-card>
+          </q-card> -->
             <!--<q-tree :nodes="nodes" node-key="label" default-expand-all></q-tree>-->
             <div class="payment-table">
     <q-markup-table>
@@ -311,6 +338,64 @@ export default defineComponent({
 
   }
 
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: transparent;
+  color: grey;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+
+  input[type=text]{
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+  input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+.item-table{
+  margin-bottom: 1rem;
+}
 
   // .q-card{
   //   background-color: transparent;
