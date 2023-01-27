@@ -1,5 +1,10 @@
 // app global css in SCSS form
 .layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   padding: 0rem 3rem;
   overflow-y: hidden;
+  background-color: #F5F5F5;
 }

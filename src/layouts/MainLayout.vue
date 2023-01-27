@@ -8,17 +8,17 @@
         </q-toolbar-title>
 
         <q-tabs inline-label no-caps active-color="primary" class="q-layout-padding text-grey" v-model="currentTab">
-          <q-tab name="dashboard" icon="location_on" label="Dashboard" class="tab"></q-tab>
-          <q-tab name="invoices" icon="wallet" label="Invoices" class="tab"></q-tab>
-          <q-tab name="wallet" icon="location_on" label="Wallet" class="tab"></q-tab>
-          <q-tab name="activity" icon="wallet" label="Activity" class="tab"></q-tab>
+          <q-tab name="dashboard" icon="dashboard" label="Dashboard" class="tab"></q-tab>
+          <q-tab name="invoices" icon="receipt" label="Invoices" class="tab"></q-tab>
+          <q-tab name="wallet" icon="wallet" label="Wallet" class="tab"></q-tab>
+          <q-tab name="activity" icon="work" label="Activity" class="tab"></q-tab>
           <q-tab name="help" icon="phone" label="Help" class="tab"></q-tab>
         </q-tabs>
         <!-- <pre>{{ currentTab }}</pre> -->
       </q-toolbar>
     </q-header>
 
-   <q-page-container>
+   <q-page-container style="background-color: #FAFAFA;">
     <q-page padding>
       <q-tab-panels v-model="currentTab" animated style="background-color:#f5f5f5;">
           <q-tab-panel name="dashboard">
@@ -36,7 +36,7 @@
             </q-banner>
           </q-tab-panel>
           <q-tab-panel name="invoices">
-               <div class="page-heading text-primary text-bold">
+               <div class="page-heading text-primary text-subtitle2">
                 Invoices
                 <span class="text-grey text-normal">
                   /edit invoice(INV-2022-010)
@@ -62,7 +62,7 @@
                 <div class="invoice-card">
                   <div class="invoice-card-left">
                     <span>
-                      <p>Billed to</p>
+                      <p class="text-bold">Invoice Number</p>
                       <p>INV-2022-010</p>
                       <p>Issued Date: 11 Jan 2022</p>
                       <p>Due Date: 18 Jan 2022</p>
@@ -70,10 +70,10 @@
                   </div>
                   <div class="invoice-card-right">
                   <span>
-                    <p>Billed to</p>
-                      <p>INV-2022-010</p>
-                      <p>Issued Date: 11 Jan 2022</p>
-                      <p>Due Date: 18 Jan 2022</p>
+                    <p class="text-bold">Billed to</p>
+                      <p>Zaky Grizzly</p>
+                      <p>Moonlight agency LTD</p>
+                      <p>New York, USA</p>
                     </span>
                   </div>
                 </div>
@@ -100,13 +100,14 @@
         You have lost connection to the internet. This app is offline.</span>
       </template>
     </q-banner> -->
+
               </q-card>
               <br>
               <div class="item-column">
                   <div class="item-details">
                     <span>
-                      Dipa Inhouse
-                      <p>hello@dipainhouse.com</p>
+                      Item Detail
+                      <p>Item Type for Hours Item</p>
                     </span>
                   </div>
                   <div class="customize-button">
@@ -115,6 +116,7 @@
                     color: #4038A4"
                     icon="settings"
                     label="Customize"></q-btn>
+                    <font-awesome-icon icon="fa-solid fa-sliders-simple" />
                   </div>
                 </div>
                   <!-- <table class="content-table">
@@ -144,7 +146,7 @@
     <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left" style="width:50%">Item Name</th>
+          <th class="text-left" style="width:40%">Item Name</th>
           <th class="text-left">Hours</th>
           <th class="text-left">Rate/hr</th>
           <th class="text-left" style="max-width: 100px">Tax</th>
@@ -158,7 +160,7 @@
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" placeholder="total" style="max-width: 100px"></q-input></td>
-          <td class="text-left"> <q-btn round color="primary" icon="add"></q-btn></td>
+          <td class="text-left"> <q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
         </tr>
         <tr>
           <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px"></q-input></td>
@@ -166,8 +168,7 @@
       </tbody>
     </q-markup-table>
   </div>
-        </section>
-        <section>
+
 
         <div class="payment-section">
         <div class="account-card-layout">
@@ -336,12 +337,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+
 .tab{
   padding: 1rem 1rem;
 }
   .toolbar{
     margin-left: 3rem;
-    padding-right: 20%;
+    padding: 0 20%;
   }
   .q-layout-padding{
     padding: 0;
@@ -350,7 +352,9 @@ export default defineComponent({
     padding: 0rem 1.5rem 1rem 0rem;
   }
   section{
-    padding: 0rem 1rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    background-color: #FFFFFF;
   }
   .q-card{
     border-radius: 1rem;
@@ -391,17 +395,30 @@ export default defineComponent({
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
+        padding-top: 10px;
+
+        p{
+          line-height: 7px;
+        }
       }
     }
   }
 
   .invoice-card{
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
 
     .invoice-card-left {
       padding-top: 1rem;
       padding-left: 1rem;
+
+      span{
+
+        p{
+          line-height: 7px;
+        }
+      }
 }
 
     .invoice-card-right{
@@ -410,6 +427,13 @@ export default defineComponent({
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        text-align: end;
+
+        span{
+        p{
+          line-height: 7px;
+        }
+        }
     }
   }
 
