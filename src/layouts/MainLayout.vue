@@ -146,7 +146,7 @@
     <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left" style="width:40%">Item Name</th>
+          <th class="text-left" style="width:45%">Item Name</th>
           <th class="text-left">Hours</th>
           <th class="text-left">Rate/hr</th>
           <th class="text-left" style="max-width: 100px">Tax</th>
@@ -159,10 +159,10 @@
           <td class="text-left"><q-input filled v-model="number" placeholder="hr" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
-          <td class="text-left"><q-input filled v-model="number" placeholder="total" style="max-width: 100px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"> <q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
         </tr>
-        <tr style="border-bottom-width: 1px;">
+        <tr>
           <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px"></q-input></td>
         </tr>
       </tbody>
@@ -170,7 +170,7 @@
   </div>
 
 
-        <div class="payment-section">
+        <div class="payment-section" style="font-size: 13px;">
         <div class="account-card-layout">
           <div class="card-headers">
               <p>Payment Methods</p>
@@ -218,17 +218,17 @@
       <thead>
         <tr>
           <th class="text-left" style="width:50%">Payment Method</th>
-          <th class="text-left">Select Payment</th>
+          <th class="text-right">$4,200.00</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="text-left">Sub Total</td>
-          <td class="text-left">$4,200.00</td>
+          <td class="text-right">$0.00</td>
         </tr>
         <tr>
           <td class="text-left">Discount</td>
-          <td class="text-left">$0.00</td>
+          <td class="text-right">$0.00</td>
         </tr>
         <tr>
           <td class="text-left"  style="border-bottom-width: 1px;"></td>
@@ -236,7 +236,7 @@
         </tr>
         <tr>
           <td class="text-left">Total Discount</td>
-          <td class="text-left">$0.00</td>
+          <td class="text-right">$4,800.00</td>
         </tr>
       </tbody>
     </q-markup-table>
@@ -523,7 +523,7 @@ height: 3rem;
 }
 
 .q-table td{
-  padding: 7px 10px;
+  // padding: 7px 10px;
 }
 }
 
@@ -540,8 +540,8 @@ height: 3rem;
   }
 
   .payment-details{
-    width: 400px;
-    margin: 25px 0;
+    width: 300px;
+    margin: 0px 0;
 
     .payment-table {
       .q-table__card {
@@ -573,6 +573,11 @@ height: 3rem;
       max-width: 4rem;
     }
   }
+}
+
+
+.q-table--horizontal-separator thead th, .q-table--horizontal-separator tbody tr:not(:last-child) > td, .q-table--cell-separator thead th, .q-table--cell-separator tbody tr:not(:last-child) > td {
+    border-bottom-width: 0px;
 }
 // .q-table th, .q-table td {
 //   border: none;
