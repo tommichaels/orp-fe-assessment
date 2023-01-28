@@ -162,7 +162,7 @@
           <td class="text-left"><q-input filled v-model="number" placeholder="total" style="max-width: 100px"></q-input></td>
           <td class="text-left"> <q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
         </tr>
-        <tr>
+        <tr style="border-bottom-width: 1px;">
           <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px"></q-input></td>
         </tr>
       </tbody>
@@ -213,7 +213,7 @@
 </table>
           </div> -->
           <div class="payment-details">
-            <div class="item-table">
+            <div class="payment-table">
               <q-markup-table>
       <thead>
         <tr>
@@ -231,8 +231,8 @@
           <td class="text-left">$0.00</td>
         </tr>
         <tr>
-          <td class="text-left"></td>
-          <td class="text-left"></td>
+          <td class="text-left"  style="border-bottom-width: 1px;"></td>
+          <td class="text-left" style="border-bottom-width: 1px;"></td>
         </tr>
         <tr>
           <td class="text-left">Total Discount</td>
@@ -500,6 +500,31 @@ export default defineComponent({
 // }
 .item-table{
   margin-bottom: 1rem;
+
+  th{
+    border-bottom: 1px solid #ccc;
+  }
+
+
+  .q-table__card {
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+
+// .q-field__control {
+//   width: 90%;
+// }
+.q-field--filled .q-field__control {
+border-radius: 12px;
+height: 3rem;
+}
+
+.q-table td{
+  padding: 7px 10px;
+}
 }
 
 .payment-section{
@@ -517,6 +542,13 @@ export default defineComponent({
   .payment-details{
     width: 400px;
     margin: 25px 0;
+
+    .payment-table {
+      .q-table__card {
+    box-shadow: none;
+
+}
+    }
   }
 }
 
@@ -542,9 +574,11 @@ export default defineComponent({
     }
   }
 }
-.q-table th, .q-table td {
-  border: none;
-}
+// .q-table th, .q-table td {
+//   border: none;
+// }
+
+
 
   // .q-card{
   //   background-color: transparent;
