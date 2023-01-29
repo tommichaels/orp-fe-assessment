@@ -331,7 +331,6 @@ export default defineComponent({
       options: ref(),
       text:ref(),
       number: ref(),
-
     }
   }
 })
