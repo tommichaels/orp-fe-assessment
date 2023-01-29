@@ -1,6 +1,6 @@
 <template>
   <q-layout class="layout" view="lHh Lpr lFf">
-    <q-header bordered class="bg-white text-primary">
+    <q-header bordered class="q-header bg-white text-primary">
       <q-toolbar class="toolbar" >
 
         <q-toolbar-title class="text-logo">
@@ -22,7 +22,8 @@
     <q-page padding>
       <q-tab-panels v-model="currentTab" animated style="background-color:#f5f5f5;">
           <q-tab-panel name="dashboard">
-            <q-input filled v-model="text" label="Filled"></q-input>            <q-banner class="bg-positive text-white q-mt-md">
+            <q-input filled v-model="text" label="Filled"></q-input>
+            <q-banner class="bg-positive text-white q-mt-md">
               <template v-slot:avatar>
                 <q-icon name="check" color="white"></q-icon>
               </template>
@@ -170,7 +171,7 @@
   </div>
 
 
-        <div class="payment-section" style="font-size: 13px;">
+        <div class="payment-section">
         <div class="account-card-layout">
           <div class="card-headers">
               <p>Payment Methods</p>
@@ -217,17 +218,17 @@
               <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left" style="width:50%">Payment Method</th>
-          <th class="text-right">$4,200.00</th>
+          <th class="text-left" style="width:50%">Sub Total</th>
+          <th class="text-right">$4,800.00</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="text-left">Sub Total</td>
+          <td class="text-left">Discount</td>
           <td class="text-right">$0.00</td>
         </tr>
         <tr>
-          <td class="text-left">Discount</td>
+          <td class="text-left">Total Tax</td>
           <td class="text-right">$0.00</td>
         </tr>
         <tr>
@@ -235,7 +236,7 @@
           <td class="text-left" style="border-bottom-width: 1px;"></td>
         </tr>
         <tr>
-          <td class="text-left">Total Discount</td>
+          <td class="text-left">Total Amount</td>
           <td class="text-right">$4,800.00</td>
         </tr>
       </tbody>
@@ -338,33 +339,59 @@ export default defineComponent({
 
 <style lang="scss">
 
-.tab{
+  .tab{
   padding: 1rem 1rem;
-}
+  }
+
   .toolbar{
-    margin-left: 3rem;
-    padding: 0 20%;
+    padding: 0 25%;
   }
   .q-layout-padding{
     padding: 0;
-  }
-  .page-heading{
-    padding: 0rem 1.5rem 1rem 0rem;
   }
   section{
     border-radius: 1rem;
     padding: 1.5rem 2rem;
     background-color: #FFFFFF;
+
+@media only screen and (max-width: 540px) {
+  font-size: 11px;
+  padding: .75rem 1rem;
+}
   }
   .q-card{
     border-radius: 1rem;
     height: max-content;
   }
 
+  .q-tab-panel {
+    padding: 24px;
+}
+
   .dipa-column, .item-column{
     display: flex;
     justify-content: space-between;
     // align-items: center;
+
+
+    .q-btn--rectangle {
+    // font-size: 40px;
+
+    @media only screen and (max-width: 840px) {
+      font-size: 12px;
+
+    }
+
+    @media only screen and (max-width: 640px) {
+      font-size: 10px;
+
+    }
+
+    @media only screen and (max-width: 440px) {
+      font-size: 8px;
+
+    }
+}
 
     .dipa-details, .item-details{
       display: flex;
@@ -385,6 +412,15 @@ export default defineComponent({
         margin-right: 1rem;
         max-width: 4rem;
         border-radius: 3rem;
+
+        @media only screen and (max-width: 840px) {
+          max-width: 3rem;
+
+    }
+    @media only screen and (max-width: 540px) {
+          max-width: 2rem;
+
+    }
       }
     }
 
@@ -408,6 +444,10 @@ export default defineComponent({
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 540px) {
+      padding: 8px;
+    }
 
     .invoice-card-left {
       padding-top: 1rem;
@@ -437,9 +477,6 @@ export default defineComponent({
     }
   }
 
-  .customize-button{
-
-  }
 
 .content-table {
   border-collapse: collapse;
@@ -530,20 +567,46 @@ height: 3rem;
 .payment-section{
   display: flex;
   justify-content: space-between;
+  font-size: 13px;
 
-  .account-details{
-    width: 600px;
+  @media only screen and (max-width: 540px) {
+      display: block;
 
-    table{
-      border: none;
     }
-  }
+
+    @media only screen and (max-width: 640px) {
+      font-size: 11px;
+
+    }
+
+  // .account-details{
+  //   width: 600px;
+
+  //   table{
+  //     border: none;
+  //   }
+  // }
 
   .payment-details{
     width: 300px;
     margin: 0px 0;
 
+    @media only screen and (max-width: 840px) {
+      width: 250px;
+  }
+
+  @media only screen and (max-width: 740px) {
+      width: 100%;
+    }
+
     .payment-table {
+
+      .q-table tbody td {
+        @media only screen and (max-width: 540px) {
+      font-size: 11px;
+
+    }
+}
       .q-table__card {
     box-shadow: none;
 
@@ -555,14 +618,29 @@ height: 3rem;
 .account-card-layout{
   width: 350px;
   margin: 25px 0;
+
+  @media only screen and (max-width: 740px) {
+      width: 100%;
+    }
   .card-headers{
     display: flex;
     justify-content: space-between;
+
   }
   .account-card{
     display: flex;
-      justify-content: space-between;
-      margin: 0px 0px 0px 15px;
+    justify-content: space-between;
+    margin: 0px 0px 0px 15px;
+    background-color: #F5F5F5;
+    padding: 10px 15px;
+    border-radius: 1rem;
+
+    @media only screen and (max-width: 840px) {
+      margin: 0px 0px 0px 5px;
+      padding: 5px 0px 0px 5px;
+  }
+
+
     .card-details{
       // p{
       //   line-height: 10px;
@@ -578,6 +656,10 @@ height: 3rem;
 
 .q-table--horizontal-separator thead th, .q-table--horizontal-separator tbody tr:not(:last-child) > td, .q-table--cell-separator thead th, .q-table--cell-separator tbody tr:not(:last-child) > td {
     border-bottom-width: 0px;
+}
+
+.page-heading{
+  padding-bottom: 24px;
 }
 // .q-table th, .q-table td {
 //   border: none;

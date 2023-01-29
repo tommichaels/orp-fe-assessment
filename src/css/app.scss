@@ -7,8 +7,19 @@
   overflow-y: hidden;
   background-color: #F5F5F5;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
+    display: block;
+    padding: 0rem 2rem;
+  }
+
+  @media only screen and (max-width: 940px) {
     display: block;
     padding: 0rem 1rem;
+  }
+
+  @media only screen and (max-width: 840px) {
+    display: block;
+    padding: 0rem 0rem;
+    font-size: 12px;
   }
 }
