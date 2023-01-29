@@ -326,11 +326,11 @@ export default defineComponent({
 
     return {
       currentTab : ref('dashboard'),
-      dashboard: ref(),
-      invoices: ref(),
-      options: ref(),
-      text:ref(),
-      number: ref(),
+      dashboard: ref(''),
+      invoices: ref(''),
+      options: ref(''),
+      text:'',
+      number:'',
 
 
     }
@@ -531,21 +531,6 @@ export default defineComponent({
 .content-table td {
   padding: 12px 15px;
 
-  // input[type=text]{
-  //   width:100%;
-  //   border:2px solid #aaa;
-  //   border-radius:4px;
-  //   margin:8px 0;
-  //   outline:none;
-  //   padding:8px;
-  //   box-sizing:border-box;
-  //   transition:.3s;
-  // }
-
-  // input[type=text]:focus{
-  //   border-color:dodgerBlue;
-  //   box-shadow:0 0 8px 0 dodgerBlue;
-  // }
 
 }
 
@@ -557,14 +542,6 @@ export default defineComponent({
   background-color: #f3f3f3;
 }
 
-// .content-table tbody tr:last-of-type {
-//   border-bottom: 2px solid #009879;
-// }
-
-// .content-table tbody tr.active-row {
-//   font-weight: bold;
-//   color: #009879;
-// }
 .item-table{
   margin-bottom: 1rem;
 
@@ -587,17 +564,11 @@ export default defineComponent({
 
 }
 
-// .q-field__control {
-//   width: 90%;
-// }
 .q-field--filled .q-field__control {
 border-radius: 12px;
 height: 3rem;
 }
 
-// .q-table td{
-//   padding: 0px 10px;
-// }
 }
 
 .payment-section{
@@ -615,13 +586,6 @@ height: 3rem;
 
     }
 
-  // .account-details{
-  //   width: 600px;
-
-  //   table{
-  //     border: none;
-  //   }
-  // }
 
   .payment-details{
     width: 300px;
