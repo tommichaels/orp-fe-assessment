@@ -164,7 +164,7 @@
           <td class="text-left"> <q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
         </tr>
         <tr>
-          <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px"></q-input></td>
+          <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px; padding-bottom: 1rem;"></q-input></td>
         </tr>
       </tbody>
     </q-markup-table>
@@ -345,6 +345,19 @@ export default defineComponent({
 
   .toolbar{
     padding: 0 25%;
+
+    .q-table__label{
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: 640px) {
+      padding: 0 5%;
+
+      .q-table__label{
+      font-size: 11px;
+    }
+
+    }
   }
   .q-layout-padding{
     padding: 0;
@@ -397,6 +410,7 @@ export default defineComponent({
       display: flex;
       justify-content: center;
       align-items: center;
+      justify-items: center;
 
       span{
         font-weight: 600;
@@ -419,6 +433,7 @@ export default defineComponent({
     }
     @media only screen and (max-width: 540px) {
           max-width: 2rem;
+          margin-right: .5rem;
 
     }
       }
@@ -445,13 +460,22 @@ export default defineComponent({
     display: flex;
     justify-content: space-between;
 
-    @media only screen and (max-width: 540px) {
+    @media only screen and (max-width: 640px) {
       padding: 8px;
+    }
+
+    @media only screen and (max-width: 540px) {
+      padding: 5px;
     }
 
     .invoice-card-left {
       padding-top: 1rem;
       padding-left: 1rem;
+
+      @media only screen and (max-width: 640px) {
+          padding-top: 10px;
+        padding-left: 10px;
+    }
 
       span{
 
@@ -468,6 +492,11 @@ export default defineComponent({
         justify-content: flex-end;
         align-items: flex-end;
         text-align: end;
+
+        @media only screen and (max-width: 640px) {
+          padding-top: 10px;
+        padding-right: 10px;
+    }
 
         span{
         p{
@@ -542,6 +571,12 @@ export default defineComponent({
     border-bottom: 1px solid #ccc;
   }
 
+  @media only screen and (max-width: 640px) {
+    .q-field__native{
+    width: auto;
+  }
+    }
+
 
   .q-table__card {
     box-shadow: none;
@@ -559,9 +594,9 @@ border-radius: 12px;
 height: 3rem;
 }
 
-.q-table td{
-  // padding: 7px 10px;
-}
+// .q-table td{
+//   padding: 0px 10px;
+// }
 }
 
 .payment-section{
