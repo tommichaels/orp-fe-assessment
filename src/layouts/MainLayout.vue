@@ -174,8 +174,8 @@
         <div class="payment-section">
         <div class="account-card-layout">
           <div class="card-headers">
-              <p>Payment Methods</p>
-              <p>Select Payment</p>
+              <p class="text-bold">Payment Method</p>
+              <p class="text-primary text-bold">Select Payment</p>
           </div>
           <div class="account-card">
               <div class="card-details">
@@ -218,7 +218,7 @@
               <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left" style="width:50%">Sub Total</th>
+          <th class="text-left text-bold" style="width:50%">Sub Total</th>
           <th class="text-right">$4,800.00</th>
         </tr>
       </thead>
@@ -480,7 +480,7 @@ export default defineComponent({
 
 .content-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 15px 0;
   font-size: 0.9em;
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -617,7 +617,7 @@ height: 3rem;
 
 .account-card-layout{
   width: 350px;
-  margin: 25px 0;
+  margin: 15px 0;
 
   @media only screen and (max-width: 740px) {
       width: 100%;
