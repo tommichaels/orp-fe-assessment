@@ -160,7 +160,7 @@
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
-          <td class="text-left"> <q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
+          <td class="text-left"><q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
         </tr>
         <tr>
           <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px; padding-bottom: 1rem;"></q-input></td>
