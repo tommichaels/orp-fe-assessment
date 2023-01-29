@@ -117,7 +117,6 @@
                     color: #4038A4"
                     icon="settings"
                     label="Customize"></q-btn>
-                    <font-awesome-icon icon="fa-solid fa-sliders-simple" />
                   </div>
                 </div>
                   <!-- <table class="content-table">
@@ -330,6 +329,8 @@ export default defineComponent({
       dashboard: ref(),
       invoices: ref(),
       options: ref(),
+      text:ref(),
+      number: ref(),
 
 
     }
