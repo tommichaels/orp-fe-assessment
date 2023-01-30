@@ -14,7 +14,6 @@
           <q-tab name="activity" icon="work" label="Activity" class="tab"></q-tab>
           <q-tab name="help" icon="phone" label="Help" class="tab"></q-tab>
         </q-tabs>
-        <!-- <pre>{{ currentTab }}</pre> -->
       </q-toolbar>
     </q-header>
 
@@ -79,29 +78,6 @@
                   </div>
                 </div>
 
-                <!-- <q-banner inline-actions class="invoice-q-card text-white bg-accent display-flex">
-      Invoice Number
-
-        <div>
-          You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline
-        </div>
-        <div>
-          You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline
-        </div>
-         <template v-slot:action>
-        <span>You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.</span>
-        <span>You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.
-        You have lost connection to the internet. This app is offline.</span>
-      </template>
-    </q-banner> -->
-
               </q-card>
               <br>
               <div class="item-column">
@@ -112,36 +88,11 @@
                     </span>
                   </div>
                   <div class="customize-button">
-                    <q-btn
-                    style="background: #F5F5FD;
-                    color: #4038A4"
+                    <q-btn style="background: #F5F5FD; color: #4038A4"
                     icon="settings"
                     label="Customize"></q-btn>
                   </div>
                 </div>
-                  <!-- <table class="content-table">
-  <thead>
-    <tr>
-      <th style="width:50%">Item Name</th>
-      <th>Hours</th>
-      <th>Rate/hr</th>
-      <th>Tax</th>
-      <th>Line Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><input type="text" placeholder="Item name"></td>
-      <td><input type="text" placeholder="Your name"></td>
-      <td><input type="text" placeholder="Your name"></td>
-      <td><input type="text" placeholder="Your name"></td>
-      <td><input type="text" placeholder="total"></td>
-    </tr>
-    <tr>
-      <td><input type="text" placeholder="Your name"></td>
-    </tr>
-  </tbody>
-</table> -->
               <div class="item-table">
     <q-markup-table>
       <thead>
@@ -177,41 +128,17 @@
               <p class="text-primary text-bold">Select Payment</p>
           </div>
           <div class="account-card">
-              <div class="card-details">
+              <div class="card-details" v-for="account in accounts" :key="account.id">
                 <p>Wire Transfer</p>
-                <p>Account Name: <span>Barly Vallendito</span></p>
-                <p>Account Number: <span>4683 8628 4834</span></p>
-                <p>Routing Number: <span>67389747834</span></p>
+                <p>Account Name: <span >{{ account['name'] }}</span></p>
+                <p>Account Number: <span>{{ account['accnumber'] }}</span></p>
+                <p>Routing Number: <span>{{ account['routingnum'] }}</span></p>
               </div>
               <div class="payment-img">
                   <img src="../assets/wise.png" />
               </div>
           </div>
         </div>
-          <!-- <div class="account-details">
-            <table class="content-table">
-  <thead>
-    <tr>
-      <th>Wire Transfer</th>
-      <th>Payment Method</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="width:60%">Account Name</td>
-      <td>88,110</td>
-    </tr>
-    <tr class="active-row">
-      <td>Account Number</td>
-      <td>72,400</td>
-    </tr>
-    <tr>
-      <td>Routing Number</td>
-      <td>52,300</td>
-    </tr>
-  </tbody>
-</table>
-          </div> -->
           <div class="payment-details">
             <div class="payment-table">
               <q-markup-table>
@@ -242,65 +169,8 @@
     </q-markup-table>
   </div>
           </div>
-
-
         </div>
-
       </section>
-            <!-- <q-card>
-            <q-input filled v-model="text" label="Filled"></q-input>
-          </q-card> -->
-            <!--<q-tree :nodes="nodes" node-key="label" default-expand-all></q-tree>-->
-            <!-- <div class="payment-table">
-    <q-markup-table>
-      <thead>
-        <tr>
-          <th class="text-left">Dessert (100g serving)</th>
-          <th class="text-right">Calories</th>
-          <th class="text-right">Fat (g)</th>
-          <th class="text-right">Carbs (g)</th>
-          <th class="text-right">Sodium (mg)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-left">Frozen Yogurt</td>
-          <td class="text-right">159</td>
-          <td class="text-right">6</td>
-          <td class="text-right">24</td>
-          <td class="text-right">87</td>
-        </tr>
-        <tr>
-          <td class="text-left">Ice cream sandwich</td>
-          <td class="text-right">237</td>
-          <td class="text-right">9</td>
-          <td class="text-right">37</td>
-          <td class="text-right">129</td>
-        </tr>
-        <tr>
-          <td class="text-left">Eclair</td>
-          <td class="text-right">262</td>
-          <td class="text-right">16</td>
-          <td class="text-right">23</td>
-          <td class="text-right">337</td>
-        </tr>
-        <tr>
-          <td class="text-left">Cupcake</td>
-          <td class="text-right">305</td>
-          <td class="text-right">3.7</td>
-          <td class="text-right">67</td>
-          <td class="text-right">413</td>
-        </tr>
-        <tr>
-          <td class="text-left">Gingerbread</td>
-          <td class="text-right">356</td>
-          <td class="text-right">16</td>
-          <td class="text-right">49</td>
-          <td class="text-right">327</td>
-        </tr>
-      </tbody>
-    </q-markup-table>
-  </div> -->
           </q-tab-panel>
         </q-tab-panels>
     </q-page>
@@ -310,33 +180,7 @@
   </q-layout>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue';
-
-
-
-
-export default defineComponent({
-  name: 'MainLayout',
-
-
-
-  setup () {
-
-
-    return {
-      currentTab : ref('dashboard'),
-      dashboard: ref(''),
-      invoices: ref(''),
-      options: ref(''),
-      text:'',
-      number:'',
-
-
-    }
-  }
-})
-</script>
+<script src="../main.js"></script>
 
 <style lang="scss">
 
