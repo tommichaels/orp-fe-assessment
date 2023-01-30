@@ -1,12 +1,11 @@
 <template>
-  <q-layout class="layout" view="lHh Lpr lFf">
+  <q-layout class="layout" view="lHr Lpr lfr">
     <q-header bordered class="q-header bg-white text-primary">
       <q-toolbar class="toolbar" >
-
         <q-toolbar-title class="text-logo">
            <strong>Paypay.</strong>
         </q-toolbar-title>
-
+        <div class="q-tabs">
         <q-tabs inline-label no-caps active-color="primary" class="q-layout-padding text-grey" v-model="currentTab">
           <q-tab name="dashboard" icon="dashboard" label="Dashboard" class="tab"></q-tab>
           <q-tab name="invoices" icon="receipt" label="Invoices" class="tab"></q-tab>
@@ -14,6 +13,7 @@
           <q-tab name="activity" icon="work" label="Activity" class="tab"></q-tab>
           <q-tab name="help" icon="phone" label="Help" class="tab"></q-tab>
         </q-tabs>
+      </div>
       </q-toolbar>
     </q-header>
 
@@ -72,7 +72,7 @@
                   <span>
                     <p class="text-bold">Billed to</p>
                       <p>Zaky Grizzly</p>
-                      <p>Moonlight agency LTD</p>
+                      <p>Moonlight Agency LTD</p>
                       <p>New York, USA</p>
                     </span>
                   </div>
@@ -88,7 +88,7 @@
                     </span>
                   </div>
                   <div class="customize-button">
-                    <q-btn style="background: #F5F5FD; color: #4038A4"
+                    <q-btn no-caps style="background: #F5F5FD; color: #4038A4"
                     icon="settings"
                     label="Customize"></q-btn>
                   </div>
@@ -97,11 +97,11 @@
     <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left" style="width:45%">Item Name</th>
-          <th class="text-left">Hours</th>
-          <th class="text-left">Rate/hr</th>
-          <th class="text-left" style="max-width: 100px">Tax</th>
-          <th class="text-left" style="max-width: 100px">Line Total</th>
+          <th class="text-left" style="width:45%; color: #808080;">Item Name</th>
+          <th class="text-left" style="color: #808080;">Hours</th>
+          <th class="text-left" style="color: #808080;">Rate/hr</th>
+          <th class="text-left" style="max-width: 100px; color: #808080;">Tax</th>
+          <th class="text-left" style="max-width: 100px; color: #808080;">Line Total</th>
         </tr>
       </thead>
       <tbody>
@@ -129,7 +129,7 @@
           </div>
           <div class="account-card">
               <div class="card-details" v-for="account in accounts" :key="account.id">
-                <p>Wire Transfer</p>
+                <p style="font-weight: 600;">Wire Transfer</p>
                 <p>Account Name: <span >{{ account['name'] }}</span></p>
                 <p>Account Number: <span>{{ account['accnumber'] }}</span></p>
                 <p>Routing Number: <span>{{ account['routingnum'] }}</span></p>
@@ -144,18 +144,18 @@
               <q-markup-table>
       <thead>
         <tr>
-          <th class="text-left text-bold" style="width:50%">Sub Total</th>
-          <th class="text-right">$4,800.00</th>
+          <th class="text-left text-bold" style="width:50%; font-weight: 600;">Sub Total</th>
+          <th class="text-right" style="font-weight: 600;">$4,800.00</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="text-left">Discount</td>
-          <td class="text-right">$0.00</td>
+          <td class="text-right" style="font-weight: 600;">$0.00</td>
         </tr>
         <tr>
           <td class="text-left">Total Tax</td>
-          <td class="text-right">$0.00</td>
+          <td class="text-right" style="font-weight: 600;">$0.00</td>
         </tr>
         <tr>
           <td class="text-left"  style="border-bottom-width: 1px;"></td>
@@ -163,7 +163,7 @@
         </tr>
         <tr>
           <td class="text-left">Total Amount</td>
-          <td class="text-right">$4,800.00</td>
+          <td class="text-right" style="font-weight: 600;">$4,800.00</td>
         </tr>
       </tbody>
     </q-markup-table>
@@ -189,7 +189,32 @@
   }
 
   .toolbar{
-    padding: 0 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-right: 8%;
+
+    .q-toolbar__title {
+      flex: none;
+      padding-right: 4rem;
+    }
+    // padding: 0 25%;
+
+    // @media only screen and (max-width: 2000px) {
+    //   padding: 0 27%;
+
+    // }
+    // @media only screen and (max-width: 1760px) {
+    //   padding: 0 23%;
+
+    // }
+
+    // @media only screen and (max-width: 1760px) {
+    //   padding: 0 23%;
+
+    // }
 
     .q-table__label{
       font-size: 14px;
@@ -206,6 +231,11 @@
   }
   .q-layout-padding{
     padding: 0;
+
+    @media only screen and (max-width: 2000px) {
+      // padding-right: 6rem;
+
+    }
   }
   section{
     border-radius: 1rem;
@@ -351,41 +381,6 @@
     }
   }
 
-
-.content-table {
-  border-collapse: collapse;
-  margin: 15px 0;
-  font-size: 0.9em;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-
-}
-
-.content-table thead tr {
-  background-color: transparent;
-  color: grey;
-  text-align: left;
-  font-weight: bold;
-}
-
-.content-table th,
-.content-table td {
-  padding: 12px 15px;
-
-
-}
-
-.content-table tbody tr {
-  border: none;
-}
-
-.content-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
 .item-table{
   margin-bottom: 1rem;
 
@@ -432,7 +427,7 @@ height: 3rem;
 
 
   .payment-details{
-    width: 300px;
+    width: 270px;
     margin: 0px 0;
 
     @media only screen and (max-width: 840px) {
@@ -489,6 +484,10 @@ height: 3rem;
       // p{
       //   line-height: 10px;
       // }
+
+      span{
+        font-weight: 600;
+      }
     }
     img{
       margin-right: 1rem;
@@ -504,6 +503,18 @@ height: 3rem;
 
 .page-heading{
   padding-bottom: 24px;
+}
+
+.customize-button{
+  .q-btn{
+    border-radius: 8px;
+  }
+  .q-btn:before {
+    box-shadow: none;
+
+  // background-color: red;
+
+  }
 }
 // .q-table th, .q-table td {
 //   border: none;
