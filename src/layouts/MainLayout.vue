@@ -7,7 +7,7 @@
         </q-toolbar-title>
       <q-separator dark vertical inset></q-separator>
       <div no-caps class="gt-sm">
-        <q-btn no-caps flat color="primary" icon="mail" label="Dashboard"></q-btn>
+        <q-btn no-caps flat color="primary" icon="dashboard" label="Dashboard"></q-btn>
 
       <q-btn no-caps @click="$router.replace('/invoice')" flat :to="{name: '/invoice'}" :class="{active: $route.name==='/invoice'}" color="primary" icon="receipt" label="Invoice"></q-btn>
 
@@ -26,7 +26,7 @@
     <div >
       <q-drawer v-model="leftDrawerOpen">
         <q-list>
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple active-class="border">
             <q-btn no-caps @click="$router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/'}" color="primary" icon="mail" label="Dashboard"></q-btn>
       </q-item>
       <q-item clickable v-ripple>
