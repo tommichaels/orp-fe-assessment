@@ -27,7 +27,8 @@ export default defineComponent({
 
   data() {
     return {
-      accounts:[]
+      accounts:[],
+      leftDrawerOpen : false,
     }
   },
 
