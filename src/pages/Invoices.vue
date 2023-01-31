@@ -3,37 +3,37 @@
   <q-layout class="layout" view="lHr Lpr lfr">
    <q-page-container name="invoices" style="background-color: #FAFAFA;">
     <q-page padding>
-               <div class="page-heading text-primary text-subtitle2">
-                Invoices
-                <span class="text-grey text-normal">
-                  /edit invoice(INV-2022-010)
-                </span>
-              </div>
-              <section>
-                <div class="dipa-column">
-                  <div class="dipa-details">
-                    <img src="../assets/dipa.png"/>
-                    <span>
-                      Dipa Inhouse
-                      <p>hello@dipainhouse.com</p>
-                    </span>
-                  </div>
-                  <div class="dipa-address">
-                        <span><p>Ijen Boulevard street 101</p>
-                        <p>Manga City,65115</p>
-                        <p>East Java, Ind0nesia</p></span>
-                  </div>
-                </div>
-              <br >
-              <q-card class="bg-accent text-white">
-                <div class="invoice-card">
-                  <div class="invoice-card-left">
-                    <span>
-                      <p class="text-bold">Invoice Number</p>
-                      <p>INV-2022-010</p>
-                      <p>Issued Date: 11 Jan 2022</p>
-                      <p>Due Date: 18 Jan 2022</p>
-                    </span>
+      <div class="page-heading text-primary text-subtitle2">
+          Invoices
+          <span class="text-grey text-normal">
+            /edit invoice(INV-2022-010)
+          </span>
+      </div>
+        <section>
+          <div class="dipa-column">
+            <div class="dipa-details">
+              <img src="../assets/dipa.png"/>
+              <span>
+                Dipa Inhouse
+                <p>hello@dipainhouse.com</p>
+              </span>
+            </div>
+            <div class="dipa-address">
+              <span><p>Ijen Boulevard street 101</p>
+              <p>Manga City,65115</p>
+              <p>East Java, Ind0nesia</p></span>
+            </div>
+          </div>
+          <br >
+          <q-card class="bg-accent text-white">
+            <div class="invoice-card">
+                <div class="invoice-card-left">
+                  <span>
+                    <p class="text-bold">Invoice Number</p>
+                    <p>INV-2022-010</p>
+                    <p>Issued Date: 11 Jan 2022</p>
+                    <p>Due Date: 18 Jan 2022</p>
+                  </span>
                   </div>
                   <div class="invoice-card-right">
                   <span>
@@ -43,52 +43,50 @@
                       <p>New York, USA</p>
                     </span>
                   </div>
-                </div>
-
-              </q-card>
+            </div>
+          </q-card>
               <br>
-              <div class="item-column">
-                  <div class="item-details">
-                    <span>
-                      Item Detail
-                      <p>Item Type for Hours Item</p>
-                    </span>
-                  </div>
-                  <div class="customize-button">
-                    <q-btn no-caps style="background: #F5F5FD; color: #4038A4"
-                    icon="settings"
-                    label="Customize"></q-btn>
-                  </div>
-                </div>
+          <div class="item-column">
+            <div class="item-details">
+              <span>
+                Item Detail
+                <p>Item Type for Hours Item</p>
+              </span>
+            </div>
+            <div class="customize-button">
+              <q-btn no-caps style="background: #F5F5FD; color: #4038A4"
+              icon="settings"
+              label="Customize"></q-btn>
+            </div>
+          </div>
               <div class="item-table">
-    <q-markup-table>
-      <thead>
-        <tr>
-          <th class="text-left" style="width:45%; color: #808080;">Item Name</th>
-          <th class="text-left" style="color: #808080;">Hours</th>
-          <th class="text-left" style="color: #808080;">Rate/hr</th>
-          <th class="text-left" style="max-width: 100px; color: #808080;">Tax</th>
-          <th class="text-left" style="max-width: 100px; color: #808080;">Line Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-left"><q-input filled v-model="text" placeholder="Item name" style="max-width: 700px"></q-input></td>
-          <td class="text-left"><q-input filled v-model="number" placeholder="hr" style="max-width: 100px"></q-input></td>
-          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
-          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
-          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
-          <td class="text-left"><q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
-        </tr>
-        <tr>
-          <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px; padding-bottom: 1rem;"></q-input></td>
-        </tr>
-      </tbody>
-    </q-markup-table>
-  </div>
+                      <q-markup-table>
+                      <thead>
+                        <tr>
+                          <th class="text-left" style="width:45%; color: #808080;">Item Name</th>
+                          <th class="text-left" style="color: #808080;">Hours</th>
+                          <th class="text-left" style="color: #808080;">Rate/hr</th>
+                          <th class="text-left" style="max-width: 100px; color: #808080;">Tax</th>
+                          <th class="text-left" style="max-width: 100px; color: #808080;">Line Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-left"><q-input filled v-model="text" placeholder="Item name" style="max-width: 700px"></q-input></td>
+                          <td class="text-left"><q-input filled v-model="number" placeholder="hr" style="max-width: 100px"></q-input></td>
+                          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
+                          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
+                          <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
+                          <td class="text-left"><q-btn round style="font-size: 10px" color="primary" icon="add"></q-btn></td>
+                        </tr>
+                        <tr>
+                          <td class="text-left"><q-input filled v-model="text" placeholder="Description" style="max-width: 700px; padding-bottom: 1rem;"></q-input></td>
+                        </tr>
+                      </tbody>
+                    </q-markup-table>
+                </div>
 
-
-        <div class="payment-section">
+      <div class="payment-section">
         <div class="account-card-layout">
           <div class="card-headers">
               <p class="text-bold">Payment Method</p>
@@ -100,48 +98,46 @@
                 <p>Account Name: <span >{{ account['name'] }}</span></p>
                 <p>Account Number: <span>{{ account['accnumber'] }}</span></p>
                 <p>Routing Number: <span>{{ account['routingnum'] }}</span></p>
-              </div>
-              <div class="payment-img">
-                  <img src="../assets/wise.png" />
-              </div>
+                  </div>
+                  <div class="payment-img">
+                    <img src="../assets/wise.png" />
+                  </div>
           </div>
-        </div>
+          </div>
           <div class="payment-details">
             <div class="payment-table">
               <q-markup-table>
-      <thead>
-        <tr>
-          <th class="text-left text-bold" style="width:50%; font-weight: 600;">Sub Total</th>
-          <th class="text-right" style="font-weight: 600;">$4,800.00</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-left">Discount</td>
-          <td class="text-right" style="font-weight: 600;">$0.00</td>
-        </tr>
-        <tr>
-          <td class="text-left">Total Tax</td>
-          <td class="text-right" style="font-weight: 600;">$0.00</td>
-        </tr>
-        <tr>
-          <td class="text-left"  style="border-bottom-width: 1px;"></td>
-          <td class="text-left" style="border-bottom-width: 1px;"></td>
-        </tr>
-        <tr>
-          <td class="text-left">Total Amount</td>
-          <td class="text-right" style="font-weight: 600;">$4,800.00</td>
-        </tr>
-      </tbody>
-    </q-markup-table>
-  </div>
+                <thead>
+                  <tr>
+                    <th class="text-left text-bold" style="width:50%; font-weight: 600;">Sub Total</th>
+                    <th class="text-right" style="font-weight: 600;">$4,800.00</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">Discount</td>
+                    <td class="text-right" style="font-weight: 600;">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Total Tax</td>
+                    <td class="text-right" style="font-weight: 600;">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left"  style="border-bottom-width: 1px;"></td>
+                    <td class="text-left" style="border-bottom-width: 1px;"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">Total Amount</td>
+                    <td class="text-right" style="font-weight: 600;">$4,800.00</td>
+                  </tr>
+                </tbody>
+              </q-markup-table>
+            </div>
           </div>
         </div>
-      </section>
-    </q-page>
-  </q-page-container>
-
-
+       </section>
+     </q-page>
+    </q-page-container>
   </q-layout>
 </template>
 
@@ -191,7 +187,6 @@
        flex: 1 1 0%;
 
       }
-
 
     }
 
