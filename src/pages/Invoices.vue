@@ -208,6 +208,7 @@
     .q-layout-padding{
       padding: 0;
 
+
       @media only screen and (max-width: 2000px) {
         // padding-right: 6rem;
 
@@ -408,11 +409,8 @@
         justify-content: space-between;
         font-size: 13px;
 
-        @media only screen and (max-width: 540px) {
+        @media only screen and (max-width: 670px) {
           display: block;
-        }
-
-        @media only screen and (max-width: 640px) {
           font-size: 11px;
         }
 
@@ -428,6 +426,10 @@
             width: 220px;
             font-size: 12px;
           }
+
+          @media only screen and (max-width: 670px) {
+            width: 100%;
+        }
 
           @media only screen and (max-width: 480px) {
             width: 100%;
@@ -456,6 +458,10 @@
         @media only screen and (max-width: 780px) {
             width: 300px;
           }
+
+          @media only screen and (max-width: 670px) {
+            width: 100%;
+        }
 
           @media only screen and (max-width: 480px) {
             width: 100%;
