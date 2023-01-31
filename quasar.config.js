@@ -151,8 +151,8 @@ module.exports = configure(function (ctx) {
 
 
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
+        name: `Paypay.`,
+        short_name: `Paypay.`,
         description: `FE assessment test for Ourpass`,
         display: 'standalone',
         orientation: 'portrait',
