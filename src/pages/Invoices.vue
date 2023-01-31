@@ -146,400 +146,397 @@
 <style lang="scss">
 
   .tab{
-  padding: 1rem 1rem;
-  }
-
-  .toolbar{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding-right: 8%;
-
-    .text-logo{
-      @media only screen and (max-width: 1024px) {
-       padding-left: 42px;
-
-      }
-
-      @media only screen and (max-width: 720px) {
-       padding-left: 10px;
-
-      }
-
-      @media only screen and (max-width: 480px) {
-       padding-left: 8px;
-
-      }
-
-      @media only screen and (max-width: 280px) {
-       padding-left: 2px;
-
-      }
+    padding: 1rem 1rem;
     }
 
-    .q-toolbar__title {
-      flex: none;
-      padding-right: 4rem;
+    .toolbar{
 
-      @media only screen and (max-width: 1024px) {
-       flex: 1 1 0%;
-
-      }
-
-    }
-
-    .q-table__label{
-      font-size: 14px;
-    }
-
-    @media only screen and (max-width: 640px) {
-      padding: 0 2%;
-
-      .q-table__label{
-      font-size: 11px;
-    }
-
-    }
-  }
-  .q-layout-padding{
-    padding: 0;
-
-    @media only screen and (max-width: 2000px) {
-      // padding-right: 6rem;
-
-    }
-  }
-  section{
-    border-radius: 1rem;
-    padding: 1.5rem 2rem;
-    background-color: #FFFFFF;
-
-    @media only screen and (max-width: 540px) {
-      font-size: 11px;
-      padding: .75rem 1rem;
-    }
-
-    @media only screen and (max-width: 380px) {
-      font-size: 11px;
-      padding: .25rem .5rem;
-    }
-  }
-  .q-card{
-    border-radius: 1rem;
-    height: max-content;
-  }
-
-  .q-tab-panel {
-    padding: 24px;
-
-    @media only screen and (max-width: 380px) {
-      padding: 10px;
-
-    }
-}
-
-  .dipa-column, .item-column{
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
-
-
-    .q-btn--rectangle {
-    // font-size: 40px;
-
-    @media only screen and (max-width: 840px) {
-      font-size: 12px;
-
-    }
-
-    @media only screen and (max-width: 640px) {
-      font-size: 10px;
-
-    }
-
-    @media only screen and (max-width: 440px) {
-      font-size: 8px;
-
-    }
-
-    @media only screen and (max-width: 380px) {
-      font-size: 6px;
-
-    }
-}
-
-    .dipa-details, .item-details{
       display: flex;
       justify-content: center;
       align-items: center;
       justify-items: center;
+      padding-right: 8%;
 
-      span{
-        font-weight: 600;
+      .text-logo{
+        @media only screen and (max-width: 1024px) {
+        padding-left: 42px;
 
-        p{
-          margin-top: 3px;
-          color: grey;
-          font-weight: 500;
+        }
+
+        @media only screen and (max-width: 720px) {
+        padding-left: 10px;
+
+        }
+
+        @media only screen and (max-width: 480px) {
+        padding-left: 8px;
+
+        }
+
+        @media only screen and (max-width: 280px) {
+        padding-left: 2px;
+
         }
       }
 
-      img{
-        margin-right: 1rem;
-        max-width: 4rem;
-        border-radius: 3rem;
+      .q-toolbar__title {
+        flex: none;
+        padding-right: 4rem;
 
-        @media only screen and (max-width: 840px) {
-          max-width: 3rem;
+        @media only screen and (max-width: 1024px) {
+        flex: 1 1 0%;
 
-    }
-    @media only screen and (max-width: 540px) {
-          max-width: 2rem;
-          margin-right: .5rem;
-
-    }
-      }
-    }
-
-    .dipa-address{
-      span{
-        color: grey;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: column;
-        padding-top: 10px;
-
-        p{
-          line-height: 7px;
         }
+
       }
-    }
-  }
 
-  .invoice-card{
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-
-    @media only screen and (max-width: 640px) {
-      padding: 8px;
-    }
-
-    @media only screen and (max-width: 540px) {
-      padding: 5px;
-    }
-
-    .invoice-card-left {
-      padding-top: 1rem;
-      padding-left: 1rem;
+      .q-table__label{
+        font-size: 14px;
+      }
 
       @media only screen and (max-width: 640px) {
-          padding-top: 10px;
-        padding-left: 10px;
+        padding: 0 2%;
+
+        .q-table__label{
+        font-size: 11px;
+      }
+
+      }
+    }
+    .q-layout-padding{
+      padding: 0;
+
+      @media only screen and (max-width: 2000px) {
+        // padding-right: 6rem;
+
+      }
+    }
+    section{
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      background-color: #FFFFFF;
+
+      @media only screen and (max-width: 540px) {
+        font-size: 11px;
+        padding: .75rem 1rem;
+      }
+
+      @media only screen and (max-width: 380px) {
+        font-size: 11px;
+        padding: .25rem .5rem;
+      }
+    }
+    .q-card{
+      border-radius: 1rem;
+      height: max-content;
     }
 
-      span{
+      .q-tab-panel {
+      padding: 24px;
 
-        p{
-          line-height: 7px;
+      @media only screen and (max-width: 380px) {
+        padding: 10px;
+
+      }
+    }
+
+    .dipa-column, .item-column{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+
+        .q-btn--rectangle {
+        // font-size: 40px;
+
+          @media only screen and (max-width: 840px) {
+            font-size: 12px;
+
+          }
+
+          @media only screen and (max-width: 640px) {
+            font-size: 10px;
+
+          }
+
+          @media only screen and (max-width: 440px) {
+            font-size: 8px;
+
+          }
+
+          @media only screen and (max-width: 380px) {
+            font-size: 6px;
+
+          }
+        }
+
+        .dipa-details, .item-details{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-items: center;
+
+          span{
+            font-weight: 600;
+
+            p{
+              margin-top: 3px;
+              color: grey;
+              font-weight: 500;
+            }
+          }
+
+          img{
+            margin-right: 1rem;
+            max-width: 4rem;
+            border-radius: 3rem;
+
+            @media only screen and (max-width: 840px) {
+              max-width: 3rem;
+
+            }
+            @media only screen and (max-width: 540px) {
+              max-width: 2rem;
+              margin-right: .5rem;
+
+            }
+          }
+        }
+
+        .dipa-address{
+          span{
+            color: grey;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            padding-top: 10px;
+
+            p{
+              line-height: 7px;
+            }
+          }
         }
       }
-}
 
-    .invoice-card-right{
+    .invoice-card{
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 640px) {
+        padding: 8px;
+      }
+
+      @media only screen and (max-width: 540px) {
+        padding: 5px;
+      }
+
+      .invoice-card-left {
         padding-top: 1rem;
-        padding-right: 1rem;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        text-align: end;
+        padding-left: 1rem;
 
         @media only screen and (max-width: 640px) {
           padding-top: 10px;
-        padding-right: 10px;
-    }
+          padding-left: 10px;
+        }
 
         span{
-        p{
-          line-height: 7px;
+
+          p{
+            line-height: 7px;
+          }
         }
+      }
+
+      .invoice-card-right{
+          padding-top: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          text-align: end;
+
+          @media only screen and (max-width: 640px) {
+          padding-top: 10px;
+          padding-right: 10px;
+          }
+
+          span{
+          p{
+            line-height: 7px;
+          }
+          }
         }
-    }
-  }
+      }
 
-.item-table{
-  margin-bottom: 1rem;
+      .item-table{
+        margin-bottom: 1rem;
 
-  th{
-    border-bottom: 1px solid #ccc;
-  }
+        th{
+          border-bottom: 1px solid #ccc;
+        }
 
-  @media only screen and (max-width: 640px) {
-    .q-field__native{
-    width: auto;
-  }
-    }
-
-
-  .q-table__card {
-    box-shadow: none;
-    border-radius: 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-
-}
-
-.q-field--filled .q-field__control {
-border-radius: 12px;
-height: 3rem;
-}
-
-}
-
-.payment-section{
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-
-  @media only screen and (max-width: 540px) {
-      display: block;
-
-    }
-
-    @media only screen and (max-width: 640px) {
-      font-size: 11px;
-
-    }
+        @media only screen and (max-width: 640px) {
+          .q-field__native{
+          width: auto;
+        }
+          }
 
 
-  .payment-details{
-    width: 270px;
-    margin: 0px 0;
+        .q-table__card {
+          box-shadow: none;
+          border-radius: 0;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
 
-    @media only screen and (max-width: 840px) {
-      width: 250px;
-  }
+        }
 
-  @media only screen and (max-width: 780px) {
-      width: 220px;
-      font-size: 12px;
-    }
+        .q-field--filled .q-field__control {
+          border-radius: 12px;
+          height: 3rem;
+        }
 
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-    }
+      }
 
-    .payment-table {
+      .payment-section{
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
 
-      .q-table tbody td {
         @media only screen and (max-width: 540px) {
-      font-size: 11px;
+          display: block;
+        }
 
-    }
-}
-      .q-table__card {
-    box-shadow: none;
+        @media only screen and (max-width: 640px) {
+          font-size: 11px;
+        }
 
-}
-    }
-  }
-}
+        .payment-details{
+          width: 270px;
+          margin: 0px 0;
 
-.account-card-layout{
-  width: 350px;
-  margin: 15px 0;
+          @media only screen and (max-width: 840px) {
+            width: 250px;
+          }
 
-  @media only screen and (max-width: 780px) {
-      width: 300px;
-    }
+          @media only screen and (max-width: 780px) {
+            width: 220px;
+            font-size: 12px;
+          }
 
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-    }
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+          }
+
+          .payment-table {
+
+            .q-table tbody td {
+              @media only screen and (max-width: 540px) {
+              font-size: 11px;
+
+              }
+            }
+            .q-table__card {
+              box-shadow: none;
+
+            }
+          }
+        }
+      }
+
+      .account-card-layout{
+        width: 350px;
+        margin: 15px 0;
+
+        @media only screen and (max-width: 780px) {
+            width: 300px;
+          }
+
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+          }
 
 
-  .card-headers{
-    display: flex;
-    justify-content: space-between;
+        .card-headers{
+          display: flex;
+          justify-content: space-between;
 
-  }
-  .account-card{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 0px 0px 15px;
-    background-color: #F5F5F5;
-    padding: 10px 15px;
-    border-radius: 1rem;
+        }
+        .account-card{
+          display: flex;
+          justify-content: space-between;
+          margin: 0px 0px 0px 15px;
+          background-color: #F5F5F5;
+          padding: 10px 15px;
+          border-radius: 1rem;
 
-    @media only screen and (max-width: 840px) {
-      margin: 0px 0px 0px 5px;
-      padding: 15px 0px 0px 5px;
-      font-size: 12px;
-  }
+          @media only screen and (max-width: 840px) {
+            margin: 0px 0px 0px 5px;
+            padding: 15px 0px 0px 5px;
+            font-size: 12px;
+          }
 
 
-    .card-details{
-      // p{
-      //   line-height: 10px;
+          .card-details{
+            // p{
+            //   line-height: 10px;
+            // }
+
+            span{
+              font-weight: 600;
+            }
+          }
+          img{
+            margin-right: 1rem;
+            max-width: 4rem;
+          }
+        }
+      }
+
+
+      .q-table--horizontal-separator thead th,
+      .q-table--horizontal-separator tbody tr:not(:last-child) > td,
+      .q-table--cell-separator thead th,
+      .q-table--cell-separator tbody tr:not(:last-child) > td {
+          border-bottom-width: 0px;
+        }
+
+      .page-heading{
+        padding: 24px 0px;
+        background-color: #F5F5F5;
+
+        @media only screen and (max-width: 540px) {
+          font-size: 11px;
+          padding: 1rem 0rem;
+        }
+      }
+
+      .customize-button{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        .q-btn{
+          border-radius: 8px;
+          @media only screen and (max-width: 380px) {
+            font-size: 12px;
+          }
+        }
+        .q-btn:before {
+          box-shadow: none;
+
+          // background-color: red;
+
+        }
+      }
+      // .q-table th, .q-table td {
+      //   border: none;
       // }
 
-      span{
-        font-weight: 600;
-      }
-    }
-    img{
-      margin-right: 1rem;
-      max-width: 4rem;
-    }
-  }
-}
 
 
-.q-table--horizontal-separator thead th,
-.q-table--horizontal-separator tbody tr:not(:last-child) > td,
-.q-table--cell-separator thead th,
-.q-table--cell-separator tbody tr:not(:last-child) > td {
-    border-bottom-width: 0px;
-}
-
-.page-heading{
-  padding: 24px 0px;
-  background-color: #F5F5F5;
-
-  @media only screen and (max-width: 540px) {
-      font-size: 11px;
-      padding: 1rem 0rem;
-    }
-}
-
-.customize-button{
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  .q-btn{
-    border-radius: 8px;
-    @media only screen and (max-width: 380px) {
-      font-size: 12px;
-    }
-  }
-  .q-btn:before {
-    box-shadow: none;
-
-  // background-color: red;
-
-  }
-}
-// .q-table th, .q-table td {
-//   border: none;
-// }
-
-
-
-  // .q-card{
-  //   background-color: transparent;
-  // }
+      // .q-card{
+      //   background-color: transparent;
+      // }
 
 </style>
