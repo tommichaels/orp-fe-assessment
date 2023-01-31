@@ -1,6 +1,6 @@
 # Quasar App (paypay)
 
-FE assessment test for Ourpass
+FE assessment test for Ourpass. Go to [Paypay](https://ourpass-paypay.vercel.app/) to view.
 
 ## Install the dependencies
 ```bash
