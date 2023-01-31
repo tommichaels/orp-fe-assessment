@@ -15,7 +15,7 @@
             "
             flat
             :to="{ name: '/' }"
-            :class="{ active: $route.name === '/', secondary: color === 1 }"
+            :class="{ active: $route.name === '/', toolbarIcons: color === 1 }"
             icon="dashboard"
             label="Dashboard"
             active-class="border"
@@ -30,7 +30,7 @@
             :to="{ name: 'invoice' }"
             :class="{
               active: $route.name === 'invoice',
-              secondary: color === 2,
+              toolbarIcons: color === 2,
             }"
             icon="receipt"
             label="Invoice"
@@ -46,7 +46,7 @@
             :to="{ name: '/wallet' }"
             :class="{
               active: $route.name === '/wallet',
-              secondary: color === 3,
+              toolbarIcons: color === 3,
             }"
             icon="wallet"
             label="Wallet"
@@ -62,7 +62,7 @@
             :to="{ name: '/activity' }"
             :class="{
               active: $route.name === '/activity',
-              secondary: color === 4,
+              toolbarIcons: color === 4,
             }"
             icon="work"
             label="Activity"
@@ -76,7 +76,7 @@
             "
             flat
             :to="{ name: '/help' }"
-            :class="{ active: $route.name === '/help', secondary: color === 5 }"
+            :class="{ active: $route.name === '/help', toolbarIcons: color === 5 }"
             icon="phone"
             label="Help"
             active-class="border"
@@ -106,7 +106,7 @@
                   :to="{ name: '/' }"
                   :class="{
                     active: $route.name === '/',
-                    secondary: color === 1,
+                    toolbarIcons: color === 1,
                   }"
                   icon="dashboard"
                   label="Dashboard"
@@ -124,7 +124,7 @@
                   :to="{ name: 'invoice' }"
                   :class="{
                     active: $route.name === 'invoice',
-                    secondary: color === 2,
+                    toolbarIcons: color === 2,
                   }"
                   icon="receipt"
                   label="Invoice"
@@ -142,7 +142,7 @@
                   :to="{ name: '/wallet' }"
                   :class="{
                     active: $route.name === '/wallet',
-                    secondary: color === 3,
+                    toolbarIcons: color === 3,
                   }"
                   icon="wallet"
                   label="Wallet"
@@ -160,7 +160,7 @@
                   :to="{ name: '/activity' }"
                   :class="{
                     active: $route.name === '/activity',
-                    secondary: color === 4,
+                    toolbarIcons: color === 4,
                   }"
                   icon="work"
                   label="Activity"
@@ -178,7 +178,7 @@
                   :to="{ name: '/help' }"
                   :class="{
                     active: $route.name === '/help',
-                    secondary: color === 5,
+                    toolbarIcons: color === 5,
                   }"
                   icon="phone"
                   label="Help"
@@ -260,7 +260,7 @@ export default defineComponent({
   }
 }
 
-.secondary {
+.toolbarIcons {
   color: #4038a4;
   border-bottom: 2px solid #4038a4;
 }
