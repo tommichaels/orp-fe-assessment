@@ -1,20 +1,19 @@
 <template>
   <q-layout class="layout" view="lHr Lpr lfr">
-    <q-header bordered class="q-header bg-white text-primary">
+    <q-header bordered class="q-header bg-white text-grey">
       <q-toolbar class="toolbar" >
-        <q-toolbar-title class="text-logo">
+        <q-toolbar-title class="text-logo text-primary">
            <strong>Paypay.</strong>
         </q-toolbar-title>
       <q-separator dark vertical inset></q-separator>
-      <div no-caps class="gt-sm">
-        <q-btn no-caps flat color="primary" icon="dashboard" label="Dashboard"></q-btn>
-
-      <q-btn no-caps @click="$router.replace('/invoice')" flat :to="{name: '/invoice'}" :class="{active: $route.name==='/invoice'}" color="primary" icon="receipt" label="Invoice"></q-btn>
-
-      <q-btn no-caps flat color="primary" icon="wallet" label="Invoice"></q-btn>
-      <q-btn no-caps flat color="primary" icon="work" label="Activity"></q-btn>
-      <q-btn no-caps flat color="primary" icon="phone" label="Help"></q-btn>
+      <div no-caps class="toolbar-btns gt-sm">
+      <q-btn no-caps @click="toggleColor(1); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 1}" icon="dashboard" label="Dashboard" active-class="border"></q-btn>
+      <q-btn no-caps @click="toggleColor(2); $router.replace('invoice')" flat :to="{name: 'invoice'}" :class="{active: $route.name==='invoice', 'secondary': color === 2}" icon="receipt" label="Invoice" active-class="border"></q-btn>
+      <q-btn no-caps @click="toggleColor(3); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 3}"  icon="wallet" label="Wallet" active-class="border"></q-btn>
+      <q-btn no-caps @click="toggleColor(4); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 4}"  icon="work" label="Activity" active-class="border"></q-btn>
+      <q-btn no-caps @click="toggleColor(5); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 5}"  icon="phone" label="Help" active-class="border"></q-btn>
     </div>
+    <div></div>
     <div class="lt-md">
       <q-btn
       flat
@@ -26,22 +25,21 @@
     <div >
       <q-drawer v-model="leftDrawerOpen">
         <q-list>
-          <q-item clickable v-ripple active-class="border">
-            <q-btn no-caps @click="$router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/'}" color="primary" icon="mail" label="Dashboard"></q-btn>
+          <q-item clickable>
+            <q-btn no-caps @click="toggleColor(1); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 1}" icon="dashboard" label="Dashboard" active-class="border"></q-btn>
       </q-item>
-      <q-item clickable v-ripple>
-        <q-btn no-caps @click="$router.replace('/invoice')" flat :to="{name: '/invoice'}" :class="{active: $route.name==='/invoice'}" color="primary" icon="receipt" label="Invoice"></q-btn>
+      <q-item clickable>
+        <q-btn no-caps @click="toggleColor(2); $router.replace('invoice')" flat :to="{name: 'invoice'}" :class="{active: $route.name==='invoice', 'secondary': color === 2}" icon="receipt" label="Invoice" active-class="border"></q-btn>
       </q-item>
-      <q-item clickable v-ripple>
-        <q-btn no-caps flat color="primary" icon="wallet" label="Wallet"></q-btn>
+      <q-item clickable>
+        <q-btn no-caps @click="toggleColor(3); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 3}"  icon="wallet" label="Wallet" active-class="border"></q-btn>
 
       </q-item>
-      <q-item clickable v-ripple>
-        <q-btn no-caps flat color="primary" icon="work" label="Activity"></q-btn>
-
+      <q-item clickable >
+        <q-btn no-caps @click="toggleColor(4); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 4}"  icon="work" label="Activity" active-class="border"></q-btn>
 </q-item>
-<q-item clickable v-ripple>
-  <q-btn no-caps flat color="primary" icon="phone" label="Help"></q-btn>
+<q-item clickable>
+  <q-btn no-caps @click="toggleColor(5); $router.replace('/')" flat :to="{name: '/'}" :class="{active: $route.name==='/', 'secondary': color === 5}"  icon="phone" label="Help" active-class="border"></q-btn>
 
 </q-item>
 
@@ -92,6 +90,21 @@ padding-right: 8%;
   }
 }
 
+.toolbar-btns{
+
+  .q-btn {
+    // background-color: red;
+    padding: 12px 15px;
+    border-radius: 0px;
+
+
+  }
+  // .q-btn--flat:before {
+
+
+  // }
+}
+
 .q-toolbar__title {
   flex: none;
   padding-right: 4rem;
@@ -103,21 +116,6 @@ padding-right: 8%;
 
 
 }
-// padding: 0 25%;
-
-// @media only screen and (max-width: 2000px) {
-//   padding: 0 27%;
-
-// }
-// @media only screen and (max-width: 1760px) {
-//   padding: 0 23%;
-
-// }
-
-// @media only screen and (max-width: 1760px) {
-//   padding: 0 23%;
-
-// }
 
 .q-table__label{
   font-size: 14px;
@@ -132,4 +130,9 @@ padding-right: 8%;
 
 }
 }
+
+.secondary{
+    color: #4038A4;
+    border-bottom: 2px solid #4038A4;
+  }
 </style>

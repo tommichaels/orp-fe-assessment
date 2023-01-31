@@ -29,6 +29,13 @@ export default defineComponent({
     return {
       accounts:[],
       leftDrawerOpen : false,
+      color: 0,
+    }
+  },
+
+  methods: {
+    toggleColor (num) {
+      this.color = num
     }
   },
 
