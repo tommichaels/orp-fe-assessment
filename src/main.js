@@ -19,9 +19,11 @@ export default defineComponent({
   name: 'MainLayout',
 
   created() {
+    this.isLoading = true
     axios.get('/api/accounts')
       .then(response => {
           this.accounts = response.data
+          this.isLoading = false
       })
   },
 
@@ -30,6 +32,7 @@ export default defineComponent({
       accounts:[],
       leftDrawerOpen : false,
       color: 0,
+      isLoading: false,
     }
   },
 

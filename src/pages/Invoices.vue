@@ -1,7 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <q-layout class="layout" view="lHr Lpr lfr">
-   <q-page-container name="invoices" style="background-color: #FAFAFA;">
+    <div v-if="isLoading" class="spinner"><div id="spinner-container">
+  <div id="loading-spinner"></div>
+</div></div>
+   <q-page-container v-else name="invoices" style="background-color: #FAFAFA;">
     <q-page padding>
       <div class="page-heading text-primary text-subtitle2">
           Invoices
@@ -144,6 +147,32 @@
 <script src="../main.js"></script>
 
 <style lang="scss">
+
+body {
+  background: transparent;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#loading-spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 50px auto;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top-color: #4038A4;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
   .tab{
     padding: 1rem 1rem;

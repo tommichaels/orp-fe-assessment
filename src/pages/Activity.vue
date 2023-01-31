@@ -1,8 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="bg-deep-purple-9 text-white text-center q-pa-md flex flex-center">
     <div>
       <div class="text-h2" style="">
-        Dashboard
+        Activity
       </div>
 
       <div class="text-h2" style="opacity:.4">
@@ -16,6 +17,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Dashboard'
+  name: 'Activity'
 })
 </script>
