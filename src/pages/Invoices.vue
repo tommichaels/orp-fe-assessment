@@ -75,7 +75,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="text-left"><q-input filled v-model="text" placeholder="Item name" style="max-width: 700px"></q-input></td>
+                          <td class="text-left"><q-input filled v-model="inputValue" placeholder="Item name" style="max-width: 700px"></q-input></td>
                           <td class="text-left"><q-input filled v-model="number" placeholder="hr" style="max-width: 100px"></q-input></td>
                           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
                           <td class="text-left"><q-input filled v-model="number" prefix="$" style="max-width: 100px"></q-input></td>
@@ -306,6 +306,7 @@ body {
           justify-items: center;
 
           span{
+            padding-top: 14px;
             font-weight: 600;
 
             p{
@@ -319,6 +320,7 @@ body {
             margin-right: 1rem;
             max-width: 4rem;
             border-radius: 3rem;
+            align-items: center;
 
             @media only screen and (max-width: 840px) {
               max-width: 3rem;

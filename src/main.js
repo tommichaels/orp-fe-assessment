@@ -1,6 +1,7 @@
 import { defineComponent, ref } from 'vue';
 import axios from 'axios';
 import { Server } from 'miragejs';
+import { mapState, mapMutations } from 'vuex'
 
 new Server({
   routes() {
@@ -25,6 +26,12 @@ export default defineComponent({
           this.accounts = response.data
           this.isLoading = false
       })
+  },
+  computed: {
+    ...mapState(['inputValue'])
+  },
+  methods: {
+    ...mapMutations(['updateInputValue'])
   },
 
   data() {
